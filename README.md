@@ -36,4 +36,8 @@
       d3x serve create -n custom -r local --kserve --model_format custom --image dkubex123/custom-model:v1 --min_cpu 1 --min_memory 1
     Prediction
       python kserve_client.py dkubex custom custom_input.json
-    
+  ## Pytorch
+    Deploy
+      d3x serve create -n mnist --kserve --model_format pytorch -r local --model_path deploy-kserve-models/pytorch/ --min_cpu 1 --min_memory 1
+    Prediction
+      python kserve_client.py dkubex mnist pytorch_input.json
