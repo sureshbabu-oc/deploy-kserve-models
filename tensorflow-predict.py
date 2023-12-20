@@ -13,7 +13,7 @@ ap.add_argument("-u", "--uri", required=True,
 ap.add_argument("-a", "--auth", required=True,
                 help="Auth token")
 args = vars(ap.parse_args())
-iimage_path = args['image']
+image_path = args['image']
 uri = args['uri']
 authorization=args['auth']
 img = image.img_to_array(image.load_img(image_path, target_size=(128, 128))) / 255.
