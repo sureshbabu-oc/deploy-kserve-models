@@ -46,4 +46,4 @@
       d3x serve create -n dogs-vs-cats --kserve --model_format tensorflow -r local --model_path deploy-kserve-models/tensorflow/model/ --min_cpu 1 --min_memory 1 --ngpus 1 --max_memory 10
     Prediction
       pip install pillow h5py tensorflow requests numpy
-      python3 tensorflow-train.py -u {url} -i cat.jpg -a {auth token}
+      python3 tensorflow-predict.py -u {url} -i cat.jpg -a {auth token}
