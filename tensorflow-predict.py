@@ -20,7 +20,7 @@ img = image.img_to_array(image.load_img(image_path, target_size=(128, 128))) / 2
 payload = {
     "instances": [{'conv2d_input': img.tolist()}]
 }
-r = requests.post(uri+'/v1/models/dogs-vs-cats:predict', json=payload, verify=False, headers={"Authorization": authorization})
+r = requests.post(uri, json=payload, verify=False, headers={"Authorization": authorization})
 pred = json.loads(r.content.decode('utf-8'))
 predict=np.asarray(pred['predictions']).argmax(axis=1)[0]
 print( "Dog" if predict==1 else "Cat" )
