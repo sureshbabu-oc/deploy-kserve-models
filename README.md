@@ -3,12 +3,12 @@
     Deploy
      d3x serve create -n sklearn-local --kserve --model_format sklearn -r local --model_path deploy-kserve-models/sklearn/ --protocol_version v2 --min_cpu 1 --min_memory 1
     Prediction
-     python kserve_client.py dkubex sklearn-local skl_input.json
+     python kserve_client.py dkubex sklearn-local sklearn_input.json
   ## Xgboost
     Deploy
       d3x serve create -n xgboost-local --kserve --model_format xgboost -r local --model_path deploy-kserve-models/xgboost/ --protocol_version v2 --min_cpu 1 --min_memory 1
     Prediction
-      python kserve_client.py dkubex xgboost-local skl_input.json
+      python kserve_client.py dkubex xgboost-local sklearn_input.json
   ## Pmml
     Deploy
       d3x serve create -n pmml-local --kserve --model_format pmml -r local --model_path deploy-kserve-models/pmml/ --min_cpu 1 --min_memory 1
@@ -18,7 +18,7 @@
     Deploy
       d3x serve create -n lgbm-local --kserve --model_format lightgbm -r local --model_path deploy-kserve-models/lightgbm/ --protocol_version v2 --min_cpu 1 --min_memory 1
     Prediction
-      python kserve_client.py dkubex lgbm-local skl_input.json
+      python kserve_client.py dkubex lgbm-local sklearn_input.json
   ## Paddle
     Deploy
       d3x serve create -n paddle-local --kserve --model_format paddle -r local --model_path deploy-kserve-models/paddle/ --min_cpu 1 --min_memory 1
