@@ -18,7 +18,7 @@
     Deploy
       d3x serve create -n lgbm-local --kserve --model_format lightgbm -r local --model_path deploy-kserve-models/lightgbm/ --protocol_version v2 --min_cpu 1 --min_memory 1
     Prediction
-      python deploy-kserve-models/kserve_client.py dkubex deploy-kserve-models/lgbm-local sklearn_input.json
+      python deploy-kserve-models/kserve_client.py dkubex lgbm-local deploy-kserve-models/sklearn_input.json
   ## Paddle
     Deploy
       d3x serve create -n paddle-local --kserve --model_format paddle -r local --model_path deploy-kserve-models/paddle/ --min_cpu 1 --min_memory 1
